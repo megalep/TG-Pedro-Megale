@@ -84,13 +84,13 @@ void loop() {
     }
 
     // Cria um PWM na porta PB0 de frequencia aproximada sampleFreqkHz/50
-    if (contador == 50000/sampleFreqKhz){
-      digitalWrite(pinOUT, LOW);
-      contador = 0;
-    }
-    else if (contador == 25000/sampleFreqKhz){
-      digitalWrite(pinOUT, HIGH);
-    }
-    contador += 1;
+    //if (contador == 50000/sampleFreqKhz){
+      //digitalWrite(pinOUT, LOW);
+      //contador = 0;
+    //}
+    //else if (contador == 25000/sampleFreqKhz){
+      //digitalWrite(pinOUT, HIGH);
+    //}
+    //contador += 1;
     
 }
