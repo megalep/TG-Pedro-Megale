@@ -56,7 +56,7 @@ inicia a coleta no setup();
 
 ao completar o buffer, pausa o timer e liga a flag_lido;
 
-calcula amplitude e fase, e trasmite os dados calcuclados por Serial;
+calcula amplitude e fase, e trasmite os dados por Serial;
 
 Reinicia o Timer e, com isso, a coleta.
 
