@@ -14,9 +14,13 @@ A taxa de amostragem é controlada por um Timer via hardware, que dispara o conv
 O programa funciona da seguinte forma:
 
 inicia a coleta de dados no setup();
+
 ao completar o buffer, pausa o timer e liga a flag_lido;
+
 transmite os dados coletados por Serial;
+
 aguarda 1000ms e reinicia o Timer e, com isso, a coleta.
+
 Enquanto isso, cria um PWM (por software) na porta PB0 de frequencia aproximada sampleFreqkHz/50.
 
 ### SingleChannelAtSampleRateSimpleDigOut_Celular
@@ -30,8 +34,11 @@ A taxa de amostragem é controlada por um Timer via hardware, que dispara o conv
 O programa funciona da seguinte forma:
 
 inicia a coleta de dados no setup();
+
 ao completar o buffer, pausa o timer e liga a flag_lido;
+
 transmite os dados coletados por Serial;
+
 aguarda 1000ms e reinicia o Timer e, com isso, a coleta.
 
 
@@ -46,7 +53,10 @@ Programa usado para calcular amplitude e fase de uma onda senoidal de 20 kHz col
 O programa usa como parâmetro a matriz pseudo inversa calculada pelo programa Matriz_inversa.
 
 inicia a coleta no setup();
+
 ao completar o buffer, pausa o timer e liga a flag_lido;
+
 calcula amplitude e fase, e trasmite os dados calcuclados por Serial;
+
 Reinicia o Timer e, com isso, a coleta.
 
