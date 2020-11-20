@@ -13,12 +13,11 @@ A taxa de amostragem é controlada por um Timer via hardware, que dispara o conv
 
 O programa funciona da seguinte forma:
 
-inicia a coleta no setup();
+inicia a coleta de dados no setup();
 ao completar o buffer, pausa o timer e liga a flag_lido;
 transmite os dados coletados por Serial;
-aguarda 1000ms e reicinia o Timer e, com isso, a coleta.
+aguarda 1000ms e reinicia o Timer e, com isso, a coleta.
 Enquanto isso, cria um PWM (por software) na porta PB0 de frequencia aproximada sampleFreqkHz/50.
-se ligar a porta A0 na porta B0, deverao aparecer aprox 10 ciclos quadrados no Plotter Serial, independentemente da frequencia usada.
 
 ### SingleChannelAtSampleRateSimpleDigOut_Celular
 
@@ -30,14 +29,24 @@ A taxa de amostragem é controlada por um Timer via hardware, que dispara o conv
 
 O programa funciona da seguinte forma:
 
-inicia a coleta no setup();
+inicia a coleta de dados no setup();
 ao completar o buffer, pausa o timer e liga a flag_lido;
 transmite os dados coletados por Serial;
-aguarda 1000ms e reicinia o Timer e, com isso, a coleta.
+aguarda 1000ms e reinicia o Timer e, com isso, a coleta.
 
-### Demodulação:
+
+### Matriz_inversa
+
+Programa em MATLAB que calcula matriz pseudo inversa de demodulação por quadratura para onda senoidal coletada no STM32 usando o programa SingleChannelAtSampleRateSimpleDigOut_Celular
+
+### Demodulação
 
 Programa usado para calcular amplitude e fase de uma onda senoidal de 20 kHz coletada pelo ADC e envia valores para porta serial.
 
+O programa usa como parâmetro a matriz pseudo inversa calculada pelo programa Matriz_inversa.
 
+inicia a coleta no setup();
+ao completar o buffer, pausa o timer e liga a flag_lido;
+calcula amplitude e fase, e trasmite os dados calcuclados por Serial;
+Reinicia o Timer e, com isso, a coleta.
 
