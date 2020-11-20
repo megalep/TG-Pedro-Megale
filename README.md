@@ -27,7 +27,7 @@ Enquanto isso, cria um PWM (por software) na porta PB0 de frequencia aproximada 
 
 Programa para verificação da taxa de amostragem da coleta dados analogicos do conversor AD do STM32. 
 
-O programa coleta o sinal enviado pelo celular que foi usado como gerador de sinais (ligar ao pinos A0), e calcula a taxa de amostragem.
+O programa coleta o sinal enviado pelo celular que foi usado como gerador de sinais (ligar ao pino A0), e calcula a taxa de amostragem.
 
 A taxa de amostragem é controlada por um Timer via hardware, que dispara o conversor AD.
 
